@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 // Default metadata that will be used as fallback for pages that don't define their own
 export const metadata: Metadata = {
-  metadataBase: new URL("https://envisionlab.com"),
+  metadataBase: new URL("https://yourusername.github.io/your-repo-name"),
   title: {
     default: "Envision Lab - Your Leading Generative AI Implementor",
     template: "%s | Envision Lab",
@@ -103,4 +103,3 @@ export default function RootLayout({
     </html>
   )
 }
-
