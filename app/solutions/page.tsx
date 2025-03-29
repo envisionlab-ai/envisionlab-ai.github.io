@@ -1,6 +1,22 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "AI Solutions | Envision Lab",
+  description:
+    "Discover how Envision Lab can transform your business with cutting-edge AI solutions tailored to your specific needs, including Personalized AI Marketing, IT & Business Consulting, Data Analysis, and Virtual Assistants.",
+  alternates: {
+    canonical: "https://envisionlab.com/solutions",
+  },
+  openGraph: {
+    title: "AI Solutions | Envision Lab",
+    description:
+      "Discover how Envision Lab can transform your business with cutting-edge AI solutions tailored to your specific needs.",
+    url: "https://envisionlab.com/solutions",
+  },
+}
 
 // Solutions data
 const solutions = [

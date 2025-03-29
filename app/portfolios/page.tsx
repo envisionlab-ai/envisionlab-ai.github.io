@@ -1,5 +1,21 @@
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "AI Implementation Portfolio | Envision Lab",
+  description:
+    "Explore our successful AI implementation projects and see how we've helped businesses transform with AI-powered solutions across various industries.",
+  alternates: {
+    canonical: "https://envisionlab.com/portfolios",
+  },
+  openGraph: {
+    title: "AI Implementation Portfolio | Envision Lab",
+    description:
+      "Explore our successful AI implementation projects and see how we've helped businesses transform with AI-powered solutions.",
+    url: "https://envisionlab.com/portfolios",
+  },
+}
 
 // Portfolio items data
 const portfolios = [

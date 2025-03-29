@@ -1,6 +1,22 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Our Team | Envision Lab",
+  description:
+    "Meet the visionary founders and talented team behind Envision Lab who are passionate about transforming businesses through AI innovation.",
+  alternates: {
+    canonical: "https://envisionlab.com/team",
+  },
+  openGraph: {
+    title: "Our Team | Envision Lab",
+    description:
+      "Meet the visionary founders and talented team behind Envision Lab who are passionate about transforming businesses through AI innovation.",
+    url: "https://envisionlab.com/team",
+  },
+}
 
 // Team members data
 const founders = [

@@ -1,6 +1,22 @@
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "AI Products | Envision Lab",
+  description:
+    "Explore our innovative AI-powered products designed to transform your business operations and drive growth, including Fifi for personalized marketing and Emedis for healthcare.",
+  alternates: {
+    canonical: "https://envisionlab.com/products",
+  },
+  openGraph: {
+    title: "AI Products | Envision Lab",
+    description:
+      "Explore our innovative AI-powered products designed to transform your business operations and drive growth.",
+    url: "https://envisionlab.com/products",
+  },
+}
 
 // Products data
 const products = [

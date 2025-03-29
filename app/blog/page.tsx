@@ -2,6 +2,22 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Badge } from "@/components/ui/badge"
 import Image from "next/image"
 import Link from "next/link"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "AI Insights Blog | Envision Lab",
+  description:
+    "Explore our blog for insights, trends, and expert perspectives on AI, business transformation, and technology innovation.",
+  alternates: {
+    canonical: "https://envisionlab.com/blog",
+  },
+  openGraph: {
+    title: "AI Insights Blog | Envision Lab",
+    description:
+      "Explore our blog for insights, trends, and expert perspectives on AI, business transformation, and technology innovation.",
+    url: "https://envisionlab.com/blog",
+  },
+}
 
 // Blog posts data
 const blogPosts = [

@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
+import type { Metadata, ResolvingMetadata } from "next"
 
 // Mock data for solutions
 const solutionData = {
@@ -215,6 +216,42 @@ const solutionData = {
       author: "Customer Experience Director, SaaS Company",
     },
   },
+}
+
+type Props = {
+  params: { slug: string }
+}
+
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const slug = params.slug
+  const solution = solutionData[slug]
+
+  if (!solution) {
+    return {
+      title: "Solution Not Found",
+    }
+  }
+
+  return {
+    title: `${solution.title} | Envision Lab`,
+    description: solution.description,
+    alternates: {
+      canonical: `https://envisionlab.com/solutions/${slug}`,
+    },
+    openGraph: {
+      title: `${solution.title} | Envision Lab`,
+      description: solution.description,
+      url: `https://envisionlab.com/solutions/${slug}`,
+      images: [
+        {
+          url: solution.image,
+          width: 800,
+          height: 400,
+          alt: solution.title,
+        },
+      ],
+    },
+  }
 }
 
 export default function SolutionDetailPage({ params }: { params: { slug: string } }) {

@@ -1,6 +1,21 @@
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import Image from "next/image"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Envision Lab - Your Leading Generative AI Implementor",
+  description:
+    "Transform your business with cutting-edge AI solutions tailored to your specific needs and goals. Envision Lab provides Generative AI implementation, IT & Business Consulting, and Customized Software Solutions.",
+  alternates: {
+    canonical: "https://envisionlab.com",
+  },
+  openGraph: {
+    title: "Envision Lab - Your Leading Generative AI Implementor",
+    description: "Transform your business with cutting-edge AI solutions tailored to your specific needs and goals.",
+    url: "https://envisionlab.com",
+  },
+}
 
 export default function Home() {
   return (
@@ -322,4 +337,3 @@ export default function Home() {
     </div>
   )
 }
-
